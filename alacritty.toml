@@ -1,0 +1,176 @@
+# Alacritty Configuration
+# Based on popular community configs with Tokyo Night theme
+
+[general]
+import = []
+
+# ── Window ────────────────────────────────────────────────────────────────────
+[window]
+padding = { x = 10, y = 10 }
+decorations = "full"
+opacity = 0.95
+blur = true
+startup_mode = "Windowed"
+dynamic_title = true
+
+# ── Scrolling ─────────────────────────────────────────────────────────────────
+[scrolling]
+history = 10000
+multiplier = 3
+
+# ── Font ──────────────────────────────────────────────────────────────────────
+# Uses JetBrainsMono Nerd Font — install from https://www.nerdfonts.com/font-downloads
+# Popular alternatives: FiraCode Nerd Font, CaskaydiaCove Nerd Font, Hack Nerd Font
+[font]
+size = 14.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style  = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style  = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style  = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style  = "Bold Italic"
+
+# Fallback if Nerd Font is not installed — swap back to Consolas
+# [font.normal]
+# family = "Consolas"
+# style  = "Regular"
+
+# ── Tokyo Night theme (commented out) ────────────────────────────────────────
+# [colors]
+# draw_bold_text_with_bright_colors = true
+#
+# [colors.primary]
+# background = '#1a1b26'
+# foreground = '#a9b1d6'
+#
+# [colors.cursor]
+# text   = '#1a1b26'
+# cursor = '#c0caf5'
+#
+# [colors.vi_mode_cursor]
+# text   = '#1a1b26'
+# cursor = '#bb9af7'
+#
+# [colors.selection]
+# text       = 'CellForeground'
+# background = '#33467c'
+#
+# [colors.search.matches]
+# foreground = '#1a1b26'
+# background = '#3d59a1'
+#
+# [colors.search.focused_match]
+# foreground = '#1a1b26'
+# background = '#e0af68'
+#
+# [colors.normal]
+# black   = '#32344a'
+# red     = '#f7768e'
+# green   = '#9ece6a'
+# yellow  = '#e0af68'
+# blue    = '#7aa2f7'
+# magenta = '#ad8ee6'
+# cyan    = '#449dab'
+# white   = '#787c99'
+#
+# [colors.bright]
+# black   = '#444b6a'
+# red     = '#ff7a93'
+# green   = '#b9f27c'
+# yellow  = '#ff9e64'
+# blue    = '#7da6ff'
+# magenta = '#bb9af7'
+# cyan    = '#0db9d7'
+# white   = '#acb0d0'
+
+# ── Ubuntu theme ──────────────────────────────────────────────────────────────
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = '#300a24'
+foreground = '#eeeeec'
+
+[colors.cursor]
+text   = '#bbbbbb'
+cursor = '#b4d5ff'
+
+[colors.normal]
+black   = '#2e3436'
+red     = '#cc0000'
+green   = '#4e9a06'
+yellow  = '#c4a000'
+blue    = '#3465a4'
+magenta = '#75507b'
+cyan    = '#06989a'
+white   = '#d3d7cf'
+
+[colors.bright]
+black   = '#555753'
+red     = '#ef2929'
+green   = '#8ae234'
+yellow  = '#fce94f'
+blue    = '#729fcf'
+magenta = '#ad7fa8'
+cyan    = '#34e2e2'
+white   = '#eeeeec'
+
+# ── Cursor ────────────────────────────────────────────────────────────────────
+[cursor]
+style         = { shape = "Block", blinking = "On" }
+blink_timeout = 5
+unfocused_hollow = true
+
+# ── Bell ──────────────────────────────────────────────────────────────────────
+[bell]
+animation = "EaseOutExpo"
+duration  = 0
+
+# ── Selection ─────────────────────────────────────────────────────────────────
+[selection]
+save_to_clipboard = true
+
+# ── Mouse ─────────────────────────────────────────────────────────────────────
+[mouse]
+hide_when_typing = true
+
+# ── Keyboard shortcuts ────────────────────────────────────────────────────────
+[[keyboard.bindings]]
+key   = "Return"
+mods  = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key   = "C"
+mods  = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key   = "V"
+mods  = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key   = "Plus"
+mods  = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key   = "Minus"
+mods  = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key   = "Key0"
+mods  = "Control"
+action = "ResetFontSize"
