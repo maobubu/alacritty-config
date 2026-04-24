@@ -4,6 +4,10 @@
 [general]
 import = []
 
+# ── Terminal ──────────────────────────────────────────────────────────────────
+[terminal]
+osc52 = "CopyPaste"
+
 # ── Shell ─────────────────────────────────────────────────────────────────────
 [terminal.shell]
 program = "powershell.exe"
@@ -26,7 +30,7 @@ dynamic_title = true
 # ── Scrolling ─────────────────────────────────────────────────────────────────
 [scrolling]
 history = 10000
-multiplier = 3
+multiplier = 10
 
 # ── Font ──────────────────────────────────────────────────────────────────────
 # Uses JetBrainsMono Nerd Font — install from https://www.nerdfonts.com/font-downloads
@@ -436,3 +440,23 @@ action = "ResetFontSize"
 key = "Return"
 mods = "Shift"
 chars = "\u001B\r"
+
+[[keyboard.bindings]]
+key   = "Up"
+mods  = "Control|Shift"
+action = "ScrollLineUp"
+
+[[keyboard.bindings]]
+key   = "Down"
+mods  = "Control|Shift"
+action = "ScrollLineDown"
+
+[[keyboard.bindings]]
+key   = "PageUp"
+mods  = "Shift"
+action = "ScrollPageUp"
+
+[[keyboard.bindings]]
+key   = "PageDown"
+mods  = "Shift"
+action = "ScrollPageDown"
